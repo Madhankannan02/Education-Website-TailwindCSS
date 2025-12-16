@@ -1,5 +1,6 @@
 import { Benefits } from "./components/Benefits";
 import { Courses } from "./components/Courses";
+import { FaqSection } from "./components/FaqSection";
 import { Header } from "./components/Header"
 import { Hero } from "./components/Hero";
 import { Testimonial } from "./components/Testimonial";
@@ -14,6 +15,7 @@ function App() {
         <Benefits />
         <Courses />
         <Testimonial />
+        <FaqSection />
       </main>
     </>
   );
