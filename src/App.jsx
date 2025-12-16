@@ -2,6 +2,7 @@ import { Benefits } from "./components/Benefits";
 import { Courses } from "./components/Courses";
 import { Header } from "./components/Header"
 import { Hero } from "./components/Hero";
+import { Testimonial } from "./components/Testimonial";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Benefits />
         <Courses />
+        <Testimonial />
       </main>
     </>
   );
