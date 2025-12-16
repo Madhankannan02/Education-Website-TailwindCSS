@@ -26,7 +26,7 @@ export function Hero() {
      <p className="text-2xl font-medium mt-4 md:text-[28p]">with Online Design and Development Courses.</p>
      <p>Learn from Industry Experts and Enhance Your Skills.</p>
 
-     <div className="flex items-center justify-ceter gap-3 mt-12 flex-wrap">
+     <div className="flex items-center justify-center gap-3 mt-12 flex-wrap">
       <button className="primary-btn max-sm:w-[80%]">Explore Courses</button>
       <button className="secondary-btn max-sm:w-[80%]">View Pricing</button>
      </div>
