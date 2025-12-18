@@ -2,7 +2,7 @@ import { heroLogos } from "../constant/data";
 import { RiPlayFill } from "@remixicon/react";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
-import * as variants from '../motion'
+import * as variants from '../motion/animation';
 
 export function Hero() {
 

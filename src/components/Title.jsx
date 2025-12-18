@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import * as variants from '../motion';
+import * as variants from '../motion/animation'
 
 export function Title({ title, text, link }) {
  return (
@@ -8,7 +8,7 @@ export function Title({ title, text, link }) {
     <motion.h2 variants={variants.fadeInUp}>
      {title}
     </motion.h2>
-    <motion.p variants={variants.fadeInUp}  className="max-w-[640px] mt-4 mb-6">{textmotion.}</motion.p>
+    <motion.p variants={variants.fadeInUp}  className="max-w-[640px] mt-4 mb-6">{text}</motion.p>
    </div>
 
    <motion.button className="secondary-btn">{link}</motion.button>

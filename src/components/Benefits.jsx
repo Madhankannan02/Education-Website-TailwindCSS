@@ -2,7 +2,7 @@ import { Title } from "./Title";
 import { benefitItems } from "../constant/data";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { motion } from "motion/react";
-import * as variants from '../motion'
+import * as variants from '../motion/animation';
 
 export function Benefits() {
   return (
