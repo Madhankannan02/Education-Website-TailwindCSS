@@ -41,7 +41,7 @@ export function Hero() {
       <motion.button variants={variants.fadeInUp} className="secondary-btn max-sm:w-[80%]">View Pricing</motion.button>
      </div>
 
-     <div className="mt-8 lg:mt-[100px] relative overflow-hidden">
+     <motion.div variants={variants.fadeIn} className="mt-8 lg:mt-[100px] relative overflow-hidden">
       <Marquee pauseOnHover={true}>
        {heroLogos.map((logo) => (
         <div className="px-14 py-5" key={logo.id}>
@@ -53,10 +53,10 @@ export function Hero() {
       <div className="absolute top-0 left-0 bg-gradient-to-r from-white-97 via-white-97/80 to-transparent w-24 h-full z-10 pointer-events-none" />
 
       <div className="absolute top-0 right-0 bg-gradient-to-l from-white-97 via-white-97/80 to-transparent w-24 h-full z-10 pointer-events-none" />
-     </div>
+     </motion.div>
     </div>
 
-    <figure className="relative rounded-xl overflow-hidden mt-10 md:mt-14 lg:mt-[50px] max-w-[920px] w-full h-[500px] mx-auto">
+    <motion.figure variants={variants.fadeIn} className="relative rounded-xl overflow-hidden mt-10 md:mt-14 lg:mt-[50px] max-w-[920px] w-full h-[500px] mx-auto">
      <img src="assets/images/hero-banner.png" alt="hero-banner" width={940} height={500} className="w-full h-full object-cover" />
 
      <div className="absolute inset-0 bg-black/20 z-10" />
@@ -66,7 +66,7 @@ export function Hero() {
        <RiPlayFill size={30} />
       </span>
      </div>
-    </figure>
+    </motion.figure>
    </motion.div>
   </section >
  );
