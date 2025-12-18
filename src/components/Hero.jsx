@@ -12,7 +12,7 @@ export function Hero() {
     variants={variants.staggerContainer}
     initial='hidden'
     whileInView='show'
-    viewport={{ once: true }}
+    viewport={{ once: true }} 
     className="container">
     <div className="mt-[50px] md:mt-20 text-center">
      <div className="relative max-w-max mx-auto pt-8 pl-8">
