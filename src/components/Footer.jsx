@@ -1,11 +1,18 @@
 import { contactInfo, footerLists, socialIcons } from "../constant/data";
+import { motion } from "motion/react";
+import * as variants from '../motion/animation';
 
 export function Footer() {
  return (
   <footer className="pt-14 pb-8 bg-white">
-   <div className="container">
+   <motion.div
+    variants={variants.staggerContainer}
+    initial='hidden'
+    whileInView='show'
+    viewport={{ once: true }}
+    className="container">
     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_0.7fr_0.7fr_0.7fr]">
-     <div className="">
+     <motion.div variants={variants.fadeInUp} className="">
       <div className="">
        <img src="assets/images/logo.png" alt="footer logo" width={150} height={50} />
       </div>
@@ -18,9 +25,9 @@ export function Footer() {
         </a>
        ))}
       </div>
-     </div>
+     </motion.div>
      {footerLists.map((item) => (
-      <div key={item.id} className="space-y-3">
+      <motion.div variants={variants.fadeInUp} key={item.id} className="space-y-3">
        <p className="text-lg font-semibold">{item.title}</p>
        <ul className="space-y-2.5">
         {item.links.map((link, index) => (
@@ -29,10 +36,10 @@ export function Footer() {
          </li>
         ))}
        </ul>
-      </div>
+      </motion.div>
      ))}
 
-     <div className="">
+     <motion.div variants={variants.fadeInUp} className="">
       <p className="text-lg font-semibold">Social Profiles</p>
       <div className="flex mt-5 gap-3">
        {socialIcons.map((icon) => (
@@ -41,11 +48,11 @@ export function Footer() {
         </button>
        ))}
       </div>
-     </div>
+     </motion.div>
     </div>
 
-    <p className="m-16 text-center lg:mt-20">&copy; {new Date().getFullYear()} Skillbridge. All rights reserved.</p>
-   </div>
+    <motion.p variants={variants.fadeInUp} className="m-16 text-center lg:mt-20">&copy; {new Date().getFullYear()} Skillbridge. All rights reserved.</motion.p>
+   </motion.div>
   </footer>
  );
 }
