@@ -4,14 +4,21 @@ import { RiArrowLeftLine, RiArrowRightLine } from "@remixicon/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Autoplay } from "swiper/modules";
+import { motion } from "motion/react";
+import * as variants from '../motion/animation';
 
 export function Testimonial() {
  return (
   <section className="section">
-   <div className="container">
+   <motion.div
+    variants={variants.staggerContainer}
+    initial='hidden'
+    whileInView='show'
+    viewport={{ once: true }} className="container">
     <Title title='Our Testimonials' text='Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.' link='View All' />
 
-    <Swiper
+    <motion.div variants={variants.fadeInUp}>
+    <Swiper 
      modules={[Navigation, Autoplay]}
      spaceBetween={30}
      breakpoints={{
@@ -31,7 +38,7 @@ export function Testimonial() {
       nextEl: '.next-btn',
      }}
      autoplay={{
-      delay:3000,
+      delay: 3000,
       pauseOnMouseEnter: true,
       disableOnInteraction: false,
      }}
@@ -52,16 +59,17 @@ export function Testimonial() {
       </SwiperSlide>
      ))}
     </Swiper>
+    </motion.div>
 
-    <div className="flex items-center justify-center mt-18 gap-5">
+    <motion.div variants={variants.fadeInUp} className="flex items-center justify-center mt-18 gap-5">
      <button className="bg-orange-70 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-orange-75 transition-colors active:bg-orange-75/80 prev-btn">
       <RiArrowLeftLine size={30} />
      </button>
      <button className="bg-orange-70 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-orange-75 transition-colors active:bg-orange-75/80 next-btn">
       <RiArrowRightLine size={30} />
      </button>
-    </div>
-   </div>
+    </motion.div>
+   </motion.div>
   </section>
  );
 }

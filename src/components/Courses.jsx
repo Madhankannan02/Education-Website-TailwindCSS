@@ -1,7 +1,7 @@
 import { Title } from "./Title";
 import { coursesSecItems } from "../constant/data";
 import { motion } from "motion/react";
-import * as variants from '../motion/animation'
+import * as variants from '../motion/animation';
 
 export function Courses() {
  return (
