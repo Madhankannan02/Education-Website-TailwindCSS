@@ -1,14 +1,17 @@
+import { motion } from "motion/react";
+import * as variants from '../motion';
+
 export function Title({ title, text, link }) {
  return (
   <div className="flex items-center justify-between flex-wrap gap-4">
    <div className="">
-    <h2>
+    <motion.h2 variants={variants.fadeInUp}>
      {title}
-    </h2>
-    <p className="max-w-[640px] mt-4 mb-6">{text}</p>
+    </motion.h2>
+    <motion.p variants={variants.fadeInUp}  className="max-w-[640px] mt-4 mb-6">{textmotion.}</motion.p>
    </div>
 
-   <button className="secondary-btn">{link}</button>
+   <motion.button className="secondary-btn">{link}</motion.button>
   </div>
  );
 }
