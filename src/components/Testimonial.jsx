@@ -30,6 +30,11 @@ export function Testimonial() {
       prevEl: '.prev-btn',
       nextEl: '.next-btn',
      }}
+     autoplay={{
+      delay:3000,
+      pauseOnMouseEnter: true,
+      disableOnInteraction: false,
+     }}
      className="mt-14 lg:mt-16">
      {testimonialsItems.map((item) => (
       <SwiperSlide key={item.id} className="bg-white border border-white-95 p-8 lg:p-10 rounded-[10px] space-y-3">
